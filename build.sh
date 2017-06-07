@@ -1,13 +1,18 @@
 #!/bin/bash
 # TeamVee, Henrikleod
 # não vou traduzir os comentarios, ate porque não é necessario
+# Changelog 07/06/17 - Script alterado para compilar o LineageOS, sem branch
 # variaveis genericas
+
+
+# Dispositivos suportados até o momento: v1, vee3, m4, p700
+
 _android="6.0.1"
 _android_version="MarshMallow"
 _custom_android="cm-13.0"
-_custom_android_version="CyanogenMod13.0"
-_github_custom_android_place="CyanogenMod"
-_github_device_place="TeamVee"
+_custom_android_version="LineageOS13.0"
+_github_custom_android_place="LineageOS"
+_github_device_place="TeamHackLG"
 
 
 while true
@@ -27,10 +32,11 @@ do
 			_unset_and_stop
 		fi
 	}
+        
+	#Favor, usar o comando SOURCE ao invés do BASH ou SH
 
-	# Unset devices variables for not have any problem
-	unset _device _device_build _device_echo
 
+        # Check Script by caio99br
 	# Check if is using 'BASH'
 	if [ ! "${BASH_VERSION}" ]
 	then
@@ -153,7 +159,7 @@ do
 	fi
 	echo "  | Usando ${_device}_manifest.xml"
 
-	# Remove old Manifest of Android Tree
+	# Os manifests estão recebendo atualizações mensais.
 	echo "  |"
 	echo "  | Removendo Manifests antigos para poder baixar um novo"
 	rm -rf .repo/manifests .repo/manifests.git .repo/manifest.xml .repo/local_manifests/
@@ -223,7 +229,12 @@ do
 		fi
 	fi
 	echo "  | Compilando para o ${_device_echo}"
-	# Builing Android
+	
+	
+	
+	
+	
+	# A partir daqui, será iniciado o processo de compilação, onde o resultado será o arquivo *.zip em /_seu_dispositivo/dist
 	echo "  |"
 	echo "  | Iniciando compilação!"
 	if [[ "${_device_build}" == "e610" || "${_device_build}" == "gen1" ]]
@@ -247,6 +258,7 @@ do
 	_unset_and_stop
 done
 
-# Goodbye!
+
+# Vlw flw
 echo "  |"
 echo "  | Obrigado por usar este script!"
