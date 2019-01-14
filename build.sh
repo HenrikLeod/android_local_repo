@@ -1,5 +1,5 @@
 #!/bin/bash
-# TeamVee, Henrikleod
+# TeamVee, Leod
 # não vou traduzir os comentarios, ate porque não é necessario
 # Changelog 07/06/17 - Script alterado para compilar o LineageOS, sem branch
 # variaveis genericas
