@@ -1,8 +1,7 @@
 #!/bin/bash
 # TeamVee, Leod
-# não vou traduzir os comentarios, ate porque não é necessario
 # Changelog 07/06/17 - Script alterado para compilar o LineageOS, sem branch
-# variaveis genericas
+# init:
 
 
 # Dispositivos suportados até o momento: v1, vee3, m4, p700
